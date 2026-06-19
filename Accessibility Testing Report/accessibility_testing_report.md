@@ -1,0 +1,53 @@
+# Accessibility Testing Report
+
+**Prepared by:** Ruknuddin Asrari  
+**Role:** Software Quality Engineer  
+**Department:** IT Software Development  
+**Organization:** The Career Insights Hub LLC  
+**Project:** Accessibility Testing Report  
+**Scope:** Basic accessibility testing for website usability and compliance readiness  
+
+## Objective
+
+Perform basic accessibility testing for a website and prepare a quality report covering readability, image alt text, button and link visibility, keyboard navigation, color contrast, observations, recommended fixes, and sample screenshots.
+
+## Test Coverage
+
+- Text readability
+- Image alt text
+- Button and link visibility
+- Keyboard navigation
+- Color contrast
+- Form/search field accessibility
+- Heading structure
+- Error handling and assistive technology support
+
+## Executive Summary
+
+The accessibility review identified **12 observations**. Several items require improvement before accessibility sign-off, especially around keyboard focus visibility, image alt text, low-contrast text, skip link availability, and accessible labels for form fields.
+
+## Accessibility Observations
+
+| ID | Area | Severity | Observation | Impact | Recommended Fix | Status |
+|---|---|---|---|---|---|---|
+| A11Y-001 | Text Readability | Medium | Body text uses small font size on some content sections | Users with low vision may struggle to read page content | Increase body text to at least 16px, use readable line-height, and avoid long text blocks | Fail |
+| A11Y-002 | Text Readability | Low | Some paragraphs have dense spacing and limited white space | Content becomes difficult to scan | Increase spacing between paragraphs and group related content under clear headings | Fail |
+| A11Y-003 | Image Alt Text | High | Decorative and content images do not consistently provide meaningful alt text | Screen-reader users may miss image purpose/context | Add descriptive alt text for meaningful images and empty alt for decorative images | Fail |
+| A11Y-004 | Button Visibility | Medium | Primary button color is visible but hover/focus feedback is not clearly noticeable | Keyboard and low-vision users may not know which control is active | Add stronger hover and focus styles using outline and contrast | Fail |
+| A11Y-005 | Link Visibility | Medium | Some links rely only on color to indicate clickability | Color-blind users may not identify links easily | Underline text links or add another non-color visual indicator | Fail |
+| A11Y-006 | Keyboard Navigation | High | Visible focus indicator is missing or weak on some buttons/links | Keyboard-only users may lose track of navigation position | Add consistent :focus-visible outline to all interactive elements | Fail |
+| A11Y-007 | Keyboard Navigation | High | No visible skip-to-content link observed | Keyboard users must tab through repeated navigation on every page | Add a skip link that becomes visible on focus | Fail |
+| A11Y-008 | Color Contrast | High | Light gray text on white background may not meet WCAG contrast expectations | Users with low vision may have difficulty reading text | Use darker text color and validate contrast against WCAG AA | Fail |
+| A11Y-009 | Color Contrast | Medium | Button text contrast should be verified across default, hover, and disabled states | Controls may become hard to read in certain states | Use WCAG AA contrast checks for all button states | Needs Review |
+| A11Y-010 | Forms/Search | Medium | Search input placeholder is helpful but label association should be confirmed | Screen readers may not announce field purpose correctly | Add visible label or aria-label connected to the search input | Needs Review |
+| A11Y-011 | Headings | Medium | Heading levels should follow a logical sequence | Screen-reader users may find page structure confusing | Use one H1 per page and sequential H2/H3 structure | Needs Review |
+| A11Y-012 | Error Handling | High | Validation/error messages should be announced clearly | Assistive technology users may miss errors | Use aria-live or role=alert for validation messages | Needs Review |
+
+
+## Conclusion
+
+The website is usable at a basic level, but accessibility improvements are required to support users with low vision, keyboard-only users, screen-reader users, and users with color-vision limitations. The recommended fixes should be implemented and retested before final QA approval.
+
+---
+
+Prepared by **Ruknuddin Asrari** - Software Quality Engineer - The Career Insights Hub LLC
